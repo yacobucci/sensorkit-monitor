@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sensorkit-monitor"
+version = "0.1.0"
+description = "Monitor application on top of SensorKit."
+authors = ["Matthew Yacobucci <yacobucci@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+starlette = "^0.45.1"
+uvicorn = "^0.34.0"
+sensorkit = "^0.1.0"
+prometheus-client = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
