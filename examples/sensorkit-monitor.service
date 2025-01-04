@@ -1,0 +1,12 @@
+[Unit]
+Description=I2C bus auto-discover and prometheus monitor service.
+Wants=network-online.target
+After=multi-user.target network-online.target
+[Service]
+Type=simple
+Restart=always
+User=pi
+Group=pi
+ExecStart=/bin/bash /home/pi/.local/bin/sm-service.bash -e /home/pi/dev/venv/sensorkit -d /home/pi/.local/bin -c /home/pi/.config/sensorkit-monitor/config.yaml
+[Install]
+WantedBy=multi-user.target
