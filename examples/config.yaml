@@ -2,10 +2,22 @@ app:
   listen:
     host: 0.0.0.0
     port: 8000
-#  logging:
-#    destination: /home/pi/dev/logs/sensorkit-monitor.log
-#    log-level: debug
-#    format: '%(levelname)s %(asctime)s : %(message)s'
+  logging:
+    version: 1
+    disable_existing_loggers: false
+    formatters:
+      sensorkit-monitor:
+        format: '%(levelname)s %(asctime)s : %(message)s'
+    handlers:
+      file:
+        class: logging.handlers.RotatingFileHandler
+        formatter: sensorkit-monitor
+        filename: /tmp/sensorkit-monitor.log
+        maxBytes: 1048576
+        backupCount: 2
+    root:
+      level: DEBUG
+      handlers: [file]
   metrics:
     encoding: prometheus
     labels:
