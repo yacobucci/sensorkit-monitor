@@ -1,6 +1,7 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import argparse
 import logging
+from logging.config import dictConfig
 import sys
 
 import board
@@ -12,20 +13,6 @@ from config import Config, load_config
 from sensorkit import SensorKit
 
 logger = logging.getLogger(__name__)
-
-def set_log_level(level: str, logger: logging.Logger):
-    if level == 'debug':
-        logger.setLevel(logging.DEBUG)
-    elif level == 'info':
-        logger.setLevel(logging.INFO)
-    elif level == 'warning':
-        logger.setLevel(logging.WARNING)
-    elif level == 'error':
-        logger.setLevel(logging.ERROR)
-    elif level == 'crit':
-        logger.setLevel(logging.CRITICAL)
-    else:
-        raise ValueError(level)
 
 scheduler = BackgroundScheduler()
 
@@ -42,30 +29,13 @@ def main():
         default=False
     )
     args = parser.parse_args()
-
     data = load_config(args.config_file)
     config = Config(data)
+    dictConfig(config.logging)
+
     scheduler.start()
-
-    try:
-        dest = config.log_destination
-        is_stream = False
-        level = config.log_level
-        fmt = config.log_format
-    except AttributeError as e:
-        print('disabling custom logging, using defaults - {}'.format(e), file=sys.stderr)
-        dest = sys.stdout
-        is_stream = True
-        fmt = '%(levelname)s %(asctime)s : %(message)s'
-        level = 'debug'
-    finally:
-        if is_stream:
-            logging.basicConfig(stream=dest, encoding='utf-8', format=fmt)
-        else:
-            logging.basicConfig(filename=dest, encoding='utf-8', format=fmt)
-        set_log_level(level, logger)
-
-    app = Starlette(debug=True)
+    do_debug = True if logger.root.level == logging.DEBUG else False
+    app = Starlette(debug=do_debug)
 
     try:
         encoding = config.metrics_encoding
@@ -82,7 +52,7 @@ def main():
 
     host = config.host
     port = config.port
-    config = uvicorn.Config(app, host=host, port=port, log_level='debug')
+    config = uvicorn.Config(app, host=host, port=port)
     server = uvicorn.Server(config)
 
     if args.test is False:

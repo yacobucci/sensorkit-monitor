@@ -15,9 +15,7 @@ class Config:
         self._host = None
         self._port = None
 
-        self._log_destination = None
-        self._log_level       = None
-        self._log_format      = None
+        self._logging = None
 
         self._metrics_endpoint = None
         self._metrics_encoding = None
@@ -46,9 +44,9 @@ class Config:
         return self._port
 
     @property
-    def log_destination(self):
-        if self._log_destination is not None:
-            return self._log_destination
+    def logging(self):
+        if self._logging is not None:
+            return self._logging
 
         try:
             logging = self._data['app']['logging']
@@ -56,36 +54,8 @@ class Config:
             message = 'config must have logging section to configure logger - missing {}'
             raise AttributeError(message.format(e))
 
-        self._log_destination = logging.get('destination', 'sys.stdout')
-        return self._log_destination
-
-    @property
-    def log_level(self):
-        if self._log_level is not None:
-            return self._log_level
-
-        try:
-            logging = self._data['app']['logging']
-        except KeyError as e:
-            message = 'config must have logging section to configure logger - missing {}'
-            raise AttributeError(message.format(e))
-
-        self._log_level = logging.get('log-level', 'info')
-        return self._log_level
-
-    @property
-    def log_format(self):
-        if self._log_format is not None:
-            return self._log_format
-
-        try:
-            logging = self._data['app']['logging']
-        except KeyError as e:
-            message = 'config must have logging section to configure logger - missing {}'
-            raise AttributeError(message.format(e))
-
-        self._log_format = logging.get('format', '%(levelname)s %(asctime)s %(message)s')
-        return self._log_format
+        self._logging = logging
+        return self._logging
 
     @property
     def metrics_endpoint(self):
