@@ -2,13 +2,13 @@
 
 [[package]]
 name = "adafruit-blinka"
-version = "8.50.0"
+version = "8.51.0"
 description = "CircuitPython APIs for non-CircuitPython versions of Python such as CPython on Linux and MicroPython."
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "Adafruit_Blinka-8.50.0-py3-none-any.whl", hash = "sha256:a0832316ac4155df956a1e35561c75e37e6f8d8e2f28b58859c80207e7819351"},
-    {file = "adafruit_blinka-8.50.0.tar.gz", hash = "sha256:64feecaa7f806fdd02b39521b5b400ebfb629a06a27a3360644375af0bbe67c2"},
+    {file = "Adafruit_Blinka-8.51.0-py3-none-any.whl", hash = "sha256:f01635f4fb5c5255167dea5c0b8feb20cc162f8e8d0140696e236796f897a834"},
+    {file = "adafruit_blinka-8.51.0.tar.gz", hash = "sha256:844f15be775ee5c418446969a427c5a3847928e644f2b1a35542acff5b208f3a"},
 ]
 
 [package.dependencies]
@@ -17,17 +17,17 @@ Adafruit-PlatformDetect = ">=3.70.1"
 Adafruit-PureIO = ">=1.1.7"
 binho-host-adapter = ">=0.1.6"
 pyftdi = ">=0.40.0"
-sysv-ipc = {version = ">=1.1.0", markers = "sys_platform == \"linux\" and platform_machine != \"mips\""}
+sysv_ipc = {version = ">=1.1.0", markers = "sys_platform == \"linux\" and platform_machine != \"mips\""}
 
 [[package]]
 name = "adafruit-circuitpython-bmp3xx"
-version = "1.3.21"
+version = "1.3.22"
 description = "CircuitPython library for BMP3XX Temperature and Barometric Pressure sensor."
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_bmp3xx-1.3.21-py3-none-any.whl", hash = "sha256:2819b73e6fc160efef18d0180b653d2abe18eb5de838da506f872b4a628240e5"},
-    {file = "adafruit_circuitpython_bmp3xx-1.3.21.tar.gz", hash = "sha256:9bc7af5472b9daf33077a06d2c61a6d071b4880bae253b45584246b643a51b2d"},
+    {file = "adafruit_circuitpython_bmp3xx-1.3.22-py3-none-any.whl", hash = "sha256:603984af4c5dc501a50d183892d62b3ac94d33872da76a0690d547c96376b58e"},
+    {file = "adafruit_circuitpython_bmp3xx-1.3.22.tar.gz", hash = "sha256:8ac655082243076a11740151e461c291c8ee88c43d6c6cc8033c7f27e742ee2d"},
 ]
 
 [package.dependencies]
@@ -36,13 +36,13 @@ adafruit-circuitpython-busdevice = "*"
 
 [[package]]
 name = "adafruit-circuitpython-busdevice"
-version = "5.2.10"
+version = "5.2.11"
 description = "CircuitPython bus device classes to manage bus sharing."
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_busdevice-5.2.10-py3-none-any.whl", hash = "sha256:9e37e303b9cced482aec004eb37a6480c5ccac60d3cfe6ea4d9c4c0a818f1fc0"},
-    {file = "adafruit_circuitpython_busdevice-5.2.10.tar.gz", hash = "sha256:b3797242cb2aeb27ed6382f7946d62ab4d6dbb16631e71e50b12ba07afec0e87"},
+    {file = "adafruit_circuitpython_busdevice-5.2.11-py3-none-any.whl", hash = "sha256:d4379c9ae86a15f7044dea815a94525ca9eda6a7c0b2fa0e75cf9e700c9384b8"},
+    {file = "adafruit_circuitpython_busdevice-5.2.11.tar.gz", hash = "sha256:a9a1310bee7021703ccc247bb3ff04d0873573948a6c7bee9016361cd6707a71"},
 ]
 
 [package.dependencies]
@@ -51,13 +51,13 @@ adafruit-circuitpython-typing = "*"
 
 [[package]]
 name = "adafruit-circuitpython-connectionmanager"
-version = "3.1.2"
+version = "3.1.3"
 description = "A urllib3.poolmanager/urllib3.connectionpool-like library for managing sockets and connections"
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_connectionmanager-3.1.2-py3-none-any.whl", hash = "sha256:1d3af302e587d4ab0827f4382d2eeb400a152688a2eb14272189f971d7ff477b"},
-    {file = "adafruit_circuitpython_connectionmanager-3.1.2.tar.gz", hash = "sha256:330485ac00da6c5f1ca567e77493cddb55ab9674afed341eddf5f9b85bd22fdb"},
+    {file = "adafruit_circuitpython_connectionmanager-3.1.3-py3-none-any.whl", hash = "sha256:9df3a4c617dae27bad1ac8607f1a084312c8498d831ebe1c6a2c8d5cb309daea"},
+    {file = "adafruit_circuitpython_connectionmanager-3.1.3.tar.gz", hash = "sha256:0f133bdedf454ede0c0a866ed605fe166cc85f75cfcea74758e3622ae403e5f9"},
 ]
 
 [package.dependencies]
@@ -65,13 +65,13 @@ Adafruit-Blinka = "*"
 
 [[package]]
 name = "adafruit-circuitpython-register"
-version = "1.10.1"
+version = "1.10.2"
 description = "CircuitPython data descriptor classes to represent hardware registers on I2C and SPI devices."
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_register-1.10.1-py3-none-any.whl", hash = "sha256:872b0da50a4fe18464d1125002194fddf2fa8627f11650e90547e519c7f846d8"},
-    {file = "adafruit_circuitpython_register-1.10.1.tar.gz", hash = "sha256:452aeedd515fb26405b100291bfc69df639d82dfac02087367508566123490a3"},
+    {file = "adafruit_circuitpython_register-1.10.2-py3-none-any.whl", hash = "sha256:2c4fc4261895b669994b9eebb7972a8e31dc0f6971a3847fbbbaa899f0c668eb"},
+    {file = "adafruit_circuitpython_register-1.10.2.tar.gz", hash = "sha256:68e1899351b186f007b26326d01e4c5ed68187b50c059e1e414b53248f80053d"},
 ]
 
 [package.dependencies]
@@ -82,13 +82,13 @@ typing-extensions = ">=4.0,<5.0"
 
 [[package]]
 name = "adafruit-circuitpython-requests"
-version = "4.1.8"
+version = "4.1.9"
 description = "A requests-like library for web interfacing"
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_requests-4.1.8-py3-none-any.whl", hash = "sha256:6ab3744175f1ddaf2ecfb2510c9ea2cf717c21848695849fcdf28de6e856fd04"},
-    {file = "adafruit_circuitpython_requests-4.1.8.tar.gz", hash = "sha256:50d787bc05d953318f4ee654230195e631eb379e33179c465a68f763d4638914"},
+    {file = "adafruit_circuitpython_requests-4.1.9-py3-none-any.whl", hash = "sha256:d0f0a899c6ef143eab9a50a9625be43f5f8da7b9688c1496891999fa20107c93"},
+    {file = "adafruit_circuitpython_requests-4.1.9.tar.gz", hash = "sha256:b9eeb252b43946f1a90c34ca8844e07bb1e01cd210c927f561d0e10b97c5ff9d"},
 ]
 
 [package.dependencies]
@@ -100,13 +100,13 @@ optional = ["requests"]
 
 [[package]]
 name = "adafruit-circuitpython-scd4x"
-version = "1.4.5"
+version = "1.4.6"
 description = "Driver for Sensirion SCD4X CO2 sensor"
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_scd4x-1.4.5-py3-none-any.whl", hash = "sha256:46a32015692941bab3f7223c4ae703303b06dd9aacacbaee6b8486e390565019"},
-    {file = "adafruit_circuitpython_scd4x-1.4.5.tar.gz", hash = "sha256:e7f9447b12ed73eeddf5eb2496625d83d0cbde6770ce9d2316e235572bc91dd2"},
+    {file = "adafruit_circuitpython_scd4x-1.4.6-py3-none-any.whl", hash = "sha256:86f8d7864b842aac205a7c080c7648d00f23c6240ae7ecd812dba8c80a30cc67"},
+    {file = "adafruit_circuitpython_scd4x-1.4.6.tar.gz", hash = "sha256:e70f55ead965749716212037b9d94a289c7a6d91e32f94d3f2552a81a1d39aca"},
 ]
 
 [package.dependencies]
@@ -115,13 +115,13 @@ adafruit-circuitpython-busdevice = "*"
 
 [[package]]
 name = "adafruit-circuitpython-sht4x"
-version = "1.0.21"
+version = "1.0.22"
 description = "Python library for Sensirion SHT4x temperature and humidity sensors"
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_sht4x-1.0.21-py3-none-any.whl", hash = "sha256:90b14872e895f3a6ecf8228b2ca733b86f42171978625865d6a1d96357e4d3ea"},
-    {file = "adafruit_circuitpython_sht4x-1.0.21.tar.gz", hash = "sha256:eca3815c293b2c26868fc4daa9fffc14ac5747bc350c93e7ba06cc6060c7ab2d"},
+    {file = "adafruit_circuitpython_sht4x-1.0.22-py3-none-any.whl", hash = "sha256:c3218640eb743bf82e8d7c8cdb1e8c00e74c2589df1dacd0add8f1c34c53fb9e"},
+    {file = "adafruit_circuitpython_sht4x-1.0.22.tar.gz", hash = "sha256:366ffa718b66aec472a06763479c994709781b987f5d13f59eb3b560b0f0d03e"},
 ]
 
 [package.dependencies]
@@ -130,13 +130,13 @@ adafruit-circuitpython-busdevice = "*"
 
 [[package]]
 name = "adafruit-circuitpython-tca9548a"
-version = "0.7.4"
+version = "0.7.5"
 description = "CircuitPython driver for the TCA9548A I2C Multiplexer."
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_tca9548a-0.7.4-py3-none-any.whl", hash = "sha256:4fc24aeb925d79f725759858be6260a9457c86cf9202e7eea258d42b9f313ca7"},
-    {file = "adafruit_circuitpython_tca9548a-0.7.4.tar.gz", hash = "sha256:3c90e9c4fb721092d755edbae88e17d33f94fc28d36356082735efb4e4060169"},
+    {file = "adafruit_circuitpython_tca9548a-0.7.5-py3-none-any.whl", hash = "sha256:8bf7d2f1210e92167e1e5b2f89c7eb9f734159313dfd2edc299e2db723b4a3f1"},
+    {file = "adafruit_circuitpython_tca9548a-0.7.5.tar.gz", hash = "sha256:064125eda26582d12e94937d71b1195e56d6b3a011bd0645373372702f1c12c5"},
 ]
 
 [package.dependencies]
@@ -147,13 +147,13 @@ typing-extensions = ">=4.0,<5.0"
 
 [[package]]
 name = "adafruit-circuitpython-tsl2591"
-version = "1.3.13"
+version = "1.4.2"
 description = "CircuitPython library for TSL2591 high precision light sensor."
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_tsl2591-1.3.13-py3-none-any.whl", hash = "sha256:dceb5fd5a7d717671c74b73a4020453463a3f16c1b6cd69063bc6d35e9d844c2"},
-    {file = "adafruit_circuitpython_tsl2591-1.3.13.tar.gz", hash = "sha256:b6cb6b74675934de9906274619c0e43ffd9ae4a535f0d3cbd1521e14e0e6d23b"},
+    {file = "adafruit_circuitpython_tsl2591-1.4.2-py3-none-any.whl", hash = "sha256:da2292037bbaf09890f665be0ab21c139a146ea4c57d34304d47657d27858c47"},
+    {file = "adafruit_circuitpython_tsl2591-1.4.2.tar.gz", hash = "sha256:566c7b76be59bae15d81b6e96028a3f747b91929c9b61801e144dcd063cbad6d"},
 ]
 
 [package.dependencies]
@@ -179,13 +179,13 @@ typing_extensions = ">=4.0,<5.0"
 
 [[package]]
 name = "adafruit-circuitpython-veml7700"
-version = "2.1.0"
+version = "2.1.1"
 description = "CircuitPython driver for VEML7700 high precision I2C ambient light sensor."
 optional = false
 python-versions = "*"
 files = [
-    {file = "adafruit_circuitpython_veml7700-2.1.0-py3-none-any.whl", hash = "sha256:25df9222df6934cd46fe55bf836495d08dc1edd0781af57acd3c0da61f7da13a"},
-    {file = "adafruit_circuitpython_veml7700-2.1.0.tar.gz", hash = "sha256:5fe8d6ecf8b03fc4a5ad2592a223bfbbf256820829fcb078ac0fc7b127d00e51"},
+    {file = "adafruit_circuitpython_veml7700-2.1.1-py3-none-any.whl", hash = "sha256:f527f1064fd058fddf6a093587d5384704727a6eebbe726392fa7fda4e7bf558"},
+    {file = "adafruit_circuitpython_veml7700-2.1.1.tar.gz", hash = "sha256:9cd267e4ffef839adbc6fdac4dd43fc3f0039ceaa7dd3f7d345e18fa5ce1838c"},
 ]
 
 [package.dependencies]
@@ -195,13 +195,13 @@ adafruit-circuitpython-register = "*"
 
 [[package]]
 name = "adafruit-platformdetect"
-version = "3.76.1"
+version = "3.77.0"
 description = "Platform detection for use by libraries like Adafruit-Blinka."
 optional = false
 python-versions = "*"
 files = [
-    {file = "Adafruit_PlatformDetect-3.76.1-py3-none-any.whl", hash = "sha256:57e392918ea542279d61abd2291953b2dfe0d87822a73683b4af6c4a6beae326"},
-    {file = "adafruit_platformdetect-3.76.1.tar.gz", hash = "sha256:c45a2aca66d812cecbedb3f4fe9b02cf8e1264eef209b300ae6f467cba36e4b8"},
+    {file = "Adafruit_PlatformDetect-3.77.0-py3-none-any.whl", hash = "sha256:93f599c21e7db2d92bc32ac69ba5063876404c4af87d11358863e62f407409be"},
+    {file = "adafruit_platformdetect-3.77.0.tar.gz", hash = "sha256:adce6386059637e92b4cb5d3430d016119cd3eb19f9276920c54515f3d798949"},
 ]
 
 [[package]]
@@ -217,13 +217,13 @@ files = [
 
 [[package]]
 name = "anyio"
-version = "4.7.0"
+version = "4.8.0"
 description = "High level compatibility layer for multiple asynchronous event loop implementations"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "anyio-4.7.0-py3-none-any.whl", hash = "sha256:ea60c3723ab42ba6fff7e8ccb0488c898ec538ff4df1f1d5e642c3601d07e352"},
-    {file = "anyio-4.7.0.tar.gz", hash = "sha256:2f834749c602966b7d456a7567cafcb309f96482b5081d14ac93ccd457f9dd48"},
+    {file = "anyio-4.8.0-py3-none-any.whl", hash = "sha256:b5011f270ab5eb0abf13385f851315585cc37ef330dd88e27ec3d34d651fd47a"},
+    {file = "anyio-4.8.0.tar.gz", hash = "sha256:1d9fe889df5212298c0c0723fa20479d1b94883a2df44bd3897aa91083316f7a"},
 ]
 
 [package.dependencies]
@@ -233,7 +233,7 @@ typing_extensions = {version = ">=4.5", markers = "python_version < \"3.13\""}
 
 [package.extras]
 doc = ["Sphinx (>=7.4,<8.0)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx_rtd_theme"]
-test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "truststore (>=0.9.1)", "uvloop (>=0.21)"]
+test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "trustme", "truststore (>=0.9.1)", "uvloop (>=0.21)"]
 trio = ["trio (>=0.26.1)"]
 
 [[package]]
@@ -396,13 +396,13 @@ cp2110 = ["hidapi"]
 
 [[package]]
 name = "pyusb"
-version = "1.3.0"
+version = "1.3.1"
 description = "Easy USB access for Python"
 optional = false
 python-versions = ">=3.9.0"
 files = [
-    {file = "pyusb-1.3.0-py3-none-any.whl", hash = "sha256:ca192893cb8cf7df89f4fcf2fea5dc9265a51637459b14635638ea9c13bab765"},
-    {file = "pyusb-1.3.0.tar.gz", hash = "sha256:7e6de8ef79e164ced020d8131cd17d45a3cdeefb7afdaf41d7a2cbf2378828c3"},
+    {file = "pyusb-1.3.1-py3-none-any.whl", hash = "sha256:bf9b754557af4717fe80c2b07cc2b923a9151f5c08d17bdb5345dac09d6a0430"},
+    {file = "pyusb-1.3.1.tar.gz", hash = "sha256:3af070b607467c1c164f49d5b0caabe8ac78dbed9298d703a8dbf9df4052d17e"},
 ]
 
 [[package]]
@@ -494,13 +494,13 @@ files = [
 
 [[package]]
 name = "sensorkit"
-version = "0.2.1"
+version = "0.2.2"
 description = "Simple utilities for generically using GPIO/I2C RPI sensors."
 optional = false
 python-versions = "<4.0,>=3.11"
 files = [
-    {file = "sensorkit-0.2.1-py3-none-any.whl", hash = "sha256:7279358fa5d189320034855a49dcb1be284f3e0165f87d98cf517ee1011e988e"},
-    {file = "sensorkit-0.2.1.tar.gz", hash = "sha256:e30b40e94496fc1b4d2a1dc354b5ffd6b6ac8e77e8d37c886ea30833d86ea983"},
+    {file = "sensorkit-0.2.2-py3-none-any.whl", hash = "sha256:23df77f55975db77fa0ec2f731c57a49def672445d1260f2e687acf6d792314a"},
+    {file = "sensorkit-0.2.2.tar.gz", hash = "sha256:0513904f69088e524e1ecf98d63e251ad392c4c9494c9758adb8a7a490a78f6e"},
 ]
 
 [package.dependencies]
@@ -557,13 +557,13 @@ files = [
 
 [[package]]
 name = "starlette"
-version = "0.45.2"
+version = "0.45.3"
 description = "The little ASGI library that shines."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "starlette-0.45.2-py3-none-any.whl", hash = "sha256:4daec3356fb0cb1e723a5235e5beaf375d2259af27532958e2d79df549dad9da"},
-    {file = "starlette-0.45.2.tar.gz", hash = "sha256:bba1831d15ae5212b22feab2f218bab6ed3cd0fc2dc1d4442443bb1ee52260e0"},
+    {file = "starlette-0.45.3-py3-none-any.whl", hash = "sha256:dfb6d332576f136ec740296c7e8bb8c8a7125044e7c6da30744718880cdd059d"},
+    {file = "starlette-0.45.3.tar.gz", hash = "sha256:2cbcba2a75806f8a41c722141486f37c28e30a0921c5f6fe4346cb0dcee1302f"},
 ]
 
 [package.dependencies]
@@ -599,13 +599,13 @@ files = [
 
 [[package]]
 name = "tzdata"
-version = "2024.2"
+version = "2025.1"
 description = "Provider of IANA time zone data"
 optional = false
 python-versions = ">=2"
 files = [
-    {file = "tzdata-2024.2-py2.py3-none-any.whl", hash = "sha256:a48093786cdcde33cad18c2555e8532f34422074448fbc874186f0abd79565cd"},
-    {file = "tzdata-2024.2.tar.gz", hash = "sha256:7d85cc416e9382e69095b7bdf4afd9e3880418a2413feec7069d533d6b4e31cc"},
+    {file = "tzdata-2025.1-py2.py3-none-any.whl", hash = "sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639"},
+    {file = "tzdata-2025.1.tar.gz", hash = "sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694"},
 ]
 
 [[package]]
