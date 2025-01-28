@@ -26,6 +26,7 @@ def main():
     parser.add_argument(
         '--test',
         help='Temp argument for development',
+        type=bool,
         default=False
     )
     args = parser.parse_args()
@@ -37,6 +38,10 @@ def main():
     do_debug = True if logger.root.level == logging.DEBUG else False
     app = Starlette(debug=do_debug)
 
+    kit = SensorKit(board.I2C(), data['sensorkit'], scheduler)
+    kit.run()
+
+    app.state.tree = kit.tree
     try:
         encoding = config.metrics_encoding
         labels = config.metrics_labels
@@ -47,8 +52,28 @@ def main():
     except AttributeError as e:
         logger.info('disabling metrics exporting - %s', e)
 
-    kit = SensorKit(board.I2C(), data['sensorkit'], scheduler, app.state)
-    kit.run()
+    if args.test is True:
+        import littletable as db
+        from sensorkit import datastructures as ds
+        ds.links.present()
+        ds.nodes.present()
+        ds.multiplexer_attributes.present()
+        ds.channel_attributes.present()
+        ds.device_attributes.present()
+        ds.meter_attributes.present()
+        for ns in ds.nodes.where(kind=5):
+            meter = ns.obj
+            msg = 'Meter {} on device id {} (using channel {}) has address {} : {} {}'.format(
+                    meter.name, meter.device_id, meter.channel_id, hex(meter.address),
+                    meter.measure, meter.units)
+            print(msg)
+
+        devs = ds.join_devices()
+        devs.present()
+        nodes = ds.join_devices_meters()
+        nodes.where(name='BMP390', measurement=8).present()
+        virtuals = ds.join_virtuals()
+        virtuals.present()
 
     host = config.host
     port = config.port

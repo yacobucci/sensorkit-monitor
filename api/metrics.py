@@ -4,7 +4,11 @@ import logging
 from prometheus_client import Gauge, generate_latest
 from starlette.responses import Response
 
-from sensorkit import constants
+from sensorkit.constants import METER
+from sensorkit.datastructures import (
+        capabilities_selector,
+        nodes,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -33,9 +37,13 @@ class PrometheusExporter(MetricsInterface):
 
     async def export(self, request) -> Response:
         tree = request.app.state.tree
-        for meter in tree.meters_iter(lambda node: not bool(node.metadata.is_virtual)):
+        for record in nodes.where(kind=METER):
+            meter = record.obj
             if meter.measurement not in dynamic_gauges:
-                dimension = constants.to_capability_strings[meter.measurement]
+                record = capabilities_selector('capability', id=meter.measurement)
+                if record.found is False:
+                    continue
+                dimension = record.field
 
                 g = Gauge(dimension,
                           'Sensor measurement - {}'.format(dimension),
@@ -45,8 +53,9 @@ class PrometheusExporter(MetricsInterface):
             gauge = dynamic_gauges[meter.measurement]
             d = dict()
             d[prometheus_labels[0]] = meter.name
-            d[prometheus_labels[1]] = meter.board
-            d[prometheus_labels[2]] = meter.bus_id
+            d[prometheus_labels[1]] = meter.device_id
+            if meter.channel_id is not None:
+                d[prometheus_labels[2]] = meter.channel_id
             d[prometheus_labels[3]] = hex(meter.address)
             d[prometheus_labels[4]] = meter.units
             for k in self._config:
