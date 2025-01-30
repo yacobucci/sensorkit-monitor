@@ -558,13 +558,13 @@ files = [
 
 [[package]]
 name = "sensorkit"
-version = "0.2.3"
+version = "0.3.0"
 description = "Simple utilities for generically using GPIO/I2C RPI sensors."
 optional = false
 python-versions = "<4.0,>=3.11"
 files = [
-    {file = "sensorkit-0.2.3-py3-none-any.whl", hash = "sha256:c15238ac2dd1a73ec1c3e1c0cff061aa4ec72e128493eff19f6b782295bf2371"},
-    {file = "sensorkit-0.2.3.tar.gz", hash = "sha256:b09520a387f0d85f7fd5c04daa30a4d6c3f857a0fcd22f4ca23556d4af2fcf25"},
+    {file = "sensorkit-0.3.0-py3-none-any.whl", hash = "sha256:2b59ed1851132333a59243827406c704e3191486b696c2a406368f688475c9e2"},
+    {file = "sensorkit-0.3.0.tar.gz", hash = "sha256:310e07a2b8122a4354dcb72dc9675ab1b0f49e29bbbe737e049b004a5d5c31c1"},
 ]
 
 [package.dependencies]
@@ -710,4 +710,4 @@ standard = ["colorama (>=0.4)", "httptools (>=0.6.3)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "5e40d86e26539e8514ea96d0fcb69ac0d906a00f35800b61573fe28fe53672b5"
+content-hash = "58f15be204441784840fbdcee47b036e5f86486a8781e0e266ab249f41f16fe2"

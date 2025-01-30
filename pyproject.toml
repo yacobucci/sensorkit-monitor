@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sensorkit-monitor"
-version = "0.2.0"
+version = "0.2.1"
 description = "Monitor application on top of SensorKit."
 authors = ["Matthew Yacobucci <yacobucci@gmail.com>"]
 license = "MIT"
@@ -11,7 +11,7 @@ python = "^3.11"
 starlette = "^0.45.1"
 uvicorn = "^0.34.0"
 prometheus-client = "^0.21.1"
-sensorkit = "^0.2.0"
+sensorkit = "^0.3.0"
 
 
 [tool.poetry.group.test.dependencies]
