@@ -77,7 +77,7 @@ def main():
 
     host = config.host
     port = config.port
-    config = uvicorn.Config(app, host=host, port=port)
+    config = uvicorn.Config(app, host=host, port=port, log_config=config.logging)
     server = uvicorn.Server(config)
 
     if args.test is False:
